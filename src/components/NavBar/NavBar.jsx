@@ -33,7 +33,7 @@ const NavBar = () => {
   return (
     <div className='navbar bg-base-100 lg:grid lg:grid-cols-3 lg:justify-between py-7'>
       <div className='p-0 navbar '>
-        <a className='text-xl btn btn-ghost'>daisyUI</a>
+        <a href='/' className='text-3xl font-bold'>Book Vibe</a>
       </div>
       <div className='justify-center hidden navbar-center lg:flex '>
         <ul className='flex gap-4 px-1 menu menu-horizontal'>{navLinks}</ul>

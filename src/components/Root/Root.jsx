@@ -8,7 +8,7 @@ const Root = () => {
         <NavBar />
         </div>
       </header>
-        <main className='max-w-[73.125rem] mx-auto '>
+        <main className='max-w-[73.125rem] mx-auto  px-3'>
             <Outlet />  
         </main>
         <footer>

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.primary-btn {
+  @apply bg-[#23BE0A] text-white font-semibold   hover:text-black rounded-lg;
+}
+.secondary-btn {
+  @apply bg-[#59C6D2] text-white font-semibold   hover:text-black rounded-lg;
+}
+.active{
+  @apply  font-bold !text-[#23BE0A] !bg-white rounded border-[#23BE0A] border-[1px];
+}

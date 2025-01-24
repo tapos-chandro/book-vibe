@@ -17,16 +17,20 @@ const BookDetails = () => {
   }, [])
 
   const handleReadBook = (id) => {
-    addStoredId(id)
+    addStoredId(id, 'books-list')
+  }
+
+  const handleWishBook = (id) => {  
+    addStoredId(id, 'wish-list')
   }
 
   return (
     <div className='hero lg:h-[44.438rem] '>
       <div className='flex flex-col items-center gap-12 pb-20 lg:flex-row'>
-        <div className='bg-[#f2f2f2] lg:w-1/2 lg:p-20 rounded-2xl'>
+        <div className='bg-[#f2f2f2] lg:w-1/2 py-20  lg:p-20 rounded-2xl flex justify-center  '>
           <img
             src={bookDetails?.image}
-            className='w-full rounded-lg shadow-2xl '
+            className='w-2/3 rounded-lg shadow-2xl md:w-2/3 lg:w-full '
           />
         </div>
         <div className='flex flex-col gap-4 lg:w-1/2'>
@@ -75,7 +79,7 @@ const BookDetails = () => {
 
           <div className='flex gap-5'>
             <button className='btn primary-btn' onClick={() => handleReadBook(bookId)}>Read</button>
-            <button className='btn secondary-btn'>Wishlist</button>
+            <button className='btn secondary-btn' onClick={() => handleWishBook(bookId)}>Wishlist</button>
           </div>
         </div>
       </div>

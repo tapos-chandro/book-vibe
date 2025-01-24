@@ -1,30 +1,29 @@
+
 import PropTypes from "prop-types";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 
 
-const WishBooks = ({book, handleRemoveReadBook}) => {
+const ReadBook = ({ book , handleRemoveReadBook}) => {
 
+  const {
+    bookId,
+    image,
+    bookName,
+    author,
+    tags,
+    totalPages,
+    publisher,
+    yearOfPublishing,
+    category,
+    rating,
+  } = book;
 
-    const {
-        bookId,
-        image,
-        bookName,
-        author,
-        tags,
-        totalPages,
-        publisher,
-        yearOfPublishing,
-        category,
-        rating,
-      } = book;
-    
-      const navigate = useNavigate()
+  const navigate = useNavigate()
+  return (
 
-
-    return (
-        <div className="relative flex flex-col items-center w-full gap-12 p-5 py-5 my-10 border-2 lg:flex-row md:flex-row rounded-2xl">
-            <button className="absolute top-0 right-0" onClick={() => handleRemoveReadBook(bookId, 'wish-list')}><RxCross2  className="p-2 text-4xl"/></button>
+      <div className="relative flex flex-col items-center w-full gap-12 p-5 py-5 my-10 border-2 lg:flex-row md:flex-row rounded-2xl">
+        <button className="absolute top-0 right-0" onClick={() => handleRemoveReadBook(bookId, 'books-list')}><RxCross2  className="p-2 text-4xl"/></button>
         <div className="bg-[#f2f2f2] lg:w-1/4 md:w-1/4 w-full rounded-2xl p-4 flex justify-center self-stretch">
           <img src={image} className="rounded-lg shadow-2xl h-44" />
         </div>
@@ -69,11 +68,13 @@ const WishBooks = ({book, handleRemoveReadBook}) => {
           </div>
         </div>
       </div>
-    );
+  );
 };
 
-WishBooks.propTypes = {
-    book: PropTypes.object.isRequired,
-    handleRemoveReadBook: PropTypes.func.isRequired
+
+ReadBook.propTypes = {
+  book: PropTypes.object.isRequired,
+  handleRemoveReadBook: PropTypes.func.isRequired
 }
-export default WishBooks;
+
+export default ReadBook;

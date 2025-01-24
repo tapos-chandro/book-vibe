@@ -16,10 +16,6 @@ const Books = () => {
 
     }, [])
 
-    console.log(books)
-
-
-
     return (
        <div>
         <h1 className="pt-10 text-4xl font-bold text-center py-9">Books</h1>

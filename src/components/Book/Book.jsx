@@ -3,7 +3,7 @@ import { PiStarThin } from "react-icons/pi"
 import { Link} from "react-router-dom"
 
 const Book = ({ book }) => {
-    // const {bookId} = useParams()
+
   const {
     bookName,
     author,
